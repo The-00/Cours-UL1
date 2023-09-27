@@ -11,6 +11,8 @@ services:
     cap_add:
       - NET_ADMIN
       - NET_RAW
-    networks: []
+    networks:
+      - intranet
 
-networks: {}
+networks:
+  intranet:
