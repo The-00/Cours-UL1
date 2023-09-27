@@ -12,7 +12,7 @@ cat nginx.tar | docker load
 
 # pour utiliser cette image :
 
-REMPLACER
+REMPLACER (dans les docker-compose
 
 ```
    build: .
@@ -21,5 +21,5 @@ REMPLACER
 PAR
 
 ```
-   images: ttrova/cours:ssh
+   image: ttrova/cours:ssh
 ```
