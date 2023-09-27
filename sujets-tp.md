@@ -46,6 +46,8 @@ Q2: Énumerez les conteneurs que vous souhaitez mettre en place, faites un schem
 
 ## Réalisation
 
-Q1: à l'aide de `docker-compose`, de plusieurs conteneurs et fichiers `rules`, réalisez une architecture web sécurisée avec un accès admin OOB.
+Q1: à l'aide de `docker-compose`, de plusieurs conteneurs et fichiers `rules`, réalisez une architecture web sécurisée avec un accès admin OOB. (le but c'est le fw : il faut donc y ajouter les règles)
+
+ps: vous pouvez gerer les ips avec docker compose
 
 Q1.bis: rendre l'architecture hautement disponnible. (keepalived)

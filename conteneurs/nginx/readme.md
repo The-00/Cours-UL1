@@ -1,12 +1,13 @@
 # Objectif
 
-Un serveur SSH qui permet, sans le rebuild, de configurer la "machine" via le fichier `rules`
+Un serveur WEB qui permet, sans le rebuild, de configurer la "machine" via le fichier `rules`
 
 # Fonctionnement
 
 * Surcouche S6 de conteneur
 * au lancement, execution du contenu de `/rules`
 * Lancement d'un serveur SSH sur le port 22
+* Lancement d'un serveur WEB sur le port 80
 
 # Utilisation
 
@@ -20,7 +21,7 @@ Configuration du fichier `docker-compose`.
 * Addresses IP
 * Mac addresses
 
-en fonctoin de votre distribution / version de docker :
+en fonction de votre distribution / version de docker :
 ```
 docker compose up --build
 # ou
