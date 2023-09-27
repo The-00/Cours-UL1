@@ -1,0 +1,16 @@
+# Effacer toutes les règles existantes
+iptables -F
+ebtables -F
+
+# Afficher les règles
+iptables -L -t filter -v
+iptables -L -t nat -v
+iptables -L -t mangle -v
+
+ebtables -L -t filter -v
+ebtables -L -t nat -v
+
+arptables -L -t filter -v
+
+# IPs
+ip address show
