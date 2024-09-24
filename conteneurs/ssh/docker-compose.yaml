@@ -8,6 +8,8 @@ services:
       # RULE_MODE: 'BULK'
     volumes:
       - "./rules:/rules"
+      # ports:
+      #   - 2222:22
     cap_add:
       - NET_ADMIN
       - NET_RAW
