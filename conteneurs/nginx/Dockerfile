@@ -7,14 +7,14 @@ ENV PASS=moi
 # PROXY-LYON1  (a deésactiver a l'exterieur de la fac)
 #=====================================================
 
-# ENV http_proxy=http://proxy.univ-lyon1.fr:3128
-# ENV ftp_proxy=http://proxy.univ-lyon1.fr:3128
-# ENV https_proxy=http://proxy.univ-lyon1.fr:3128
-# ENV all_proxy=http://proxy.univ-lyon1.fr:3128
-# ENV HTTP_PROXY=http://proxy.univ-lyon1.fr:3128
-# ENV FTP_PROXY=http://proxy.univ-lyon1.fr:3128
-# ENV HTTPS_PROXY=http://proxy.univ-lyon1.fr:3128
-# ENV ALL_PROXY=http://proxy.univ-lyon1.fr:3128
+ENV http_proxy=http://proxy.univ-lyon1.fr:3128
+ENV ftp_proxy=http://proxy.univ-lyon1.fr:3128
+ENV https_proxy=http://proxy.univ-lyon1.fr:3128
+ENV all_proxy=http://proxy.univ-lyon1.fr:3128
+ENV HTTP_PROXY=http://proxy.univ-lyon1.fr:3128
+ENV FTP_PROXY=http://proxy.univ-lyon1.fr:3128
+ENV HTTPS_PROXY=http://proxy.univ-lyon1.fr:3128
+ENV ALL_PROXY=http://proxy.univ-lyon1.fr:3128
 
 #=====================================================
 # INSTALLATION S6
