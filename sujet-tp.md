@@ -4,7 +4,7 @@
 
 Vous avez le choix !!!
 
-Je conseil une VM dans OpenStack (cela vous permettra de vous familiariser avec la plateforme) -> 2cpu, 4Go ram et docker
+Je conseil une VM dans OpenStack (cela vous permettra de vous familiariser avec la plateforme) -> 2cpu, 4Go ram et docker + https://docs.docker.com/engine/install/
 
 Vous pouvez aussi utiliser n'importer quelle machine avec Docker qui tourne (pc perso, machine tpr, etc).
 
