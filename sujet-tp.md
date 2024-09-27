@@ -24,13 +24,11 @@ Q.0: Avez vous iptables ? les autres Xtables ? nftables ?
 
 Q1.1: Décrivez les interfaces qui existent avant de lancer le conteneur.
 
-Q1.2: Décrivez les interfaces qui apparaissent lorsque vous lancez le conteneur.
+Q1.2: Décrivez les règles Xtables qui existent avant de lancer le conteneur.
 
-Q2.1: Décrivez les règles Xtables qui existent avant de lancer le conteneur.
+Q2.1: Décrivez les interfaces qui apparaissent lorsque vous lancez le conteneur.
 
-Q2.2: Décrivez les règles Xtables qui apparaissent lorsque vous lancez le conteneur.
-
-Q2.3: Que font ces règles ?
+Q2.2: Décrivez les règles Xtables qui apparaissent lorsque vous lancez le conteneur. Si rien ne change : pourquoi ?
 
 Q3: Si vous décommentez la partie `ports` du docker-compose, que se passe t-il au niveau des règles Xtables, pourquoi ?
 
@@ -40,11 +38,11 @@ Q4: Expérimentez avec les `docker networks` : quelles sont les règles que ces 
 
 Ok, on a bien regarder ce qui se passait sur votre machine (ou du moins le host docker), regardons ce que l'on peut faire avec des règles Xtables.
 
-Si Vous avez bien regarder, il éxiste une partie `cap` (capabilities) dans le docker-compose. C'est ce qui permet d'utiliser Xtables à l'intérieur du conteneur (une sombre histoire d'appels noyaux [https://www.man7.org/linux/man-pages/man7/capabilities.7.html])
+Si Vous avez bien regarder, il éxiste une partie `add_cap` (capabilities) dans le docker-compose. C'est ce qui permet d'utiliser Xtables à l'intérieur du conteneur (une sombre histoire d'appels noyaux [https://www.man7.org/linux/man-pages/man7/capabilities.7.html])
 
-Vous pouvez donc modifier les règles Xtables appliquées **dans** le conteneur via le fichier `rules`
+Vous pouvez donc modifier les règles Xtables appliquées **dans** le conteneur via le fichier `rules`. Cela peut vous permettre de réviser votre syntaxe.
 
-Q1: Écrivez les règles pour réaliser les actions suivantes via des commandes Xtables 'legacy':
+Q1: Écrivez les règles pour réaliser les actions suivantes via des commandes Xtables 'legacy' (pas toutes en même temps, sinon il y à des choses qui vont se contredire):
 
     * bloquer le ping
     * autoriser uniquement le ping
@@ -56,7 +54,7 @@ Q1: Écrivez les règles pour réaliser les actions suivantes via des commandes 
     * autoriser uniquement les connexions sortantes
     * autoriser uniquement les flux déjà éxistant (conntrack)
 
-Q1.bis: Essayez d'écrire les même règles via `nft`
+Q2: Essayez d'écrire les même règles via `nft`
 
 
 # Partie 2 | Bonnes Pratiques
@@ -64,6 +62,8 @@ Q1.bis: Essayez d'écrire les même règles via `nft`
 ## Conception d'une architecture WEB
 
 Ici on s'amuse un peu plus et vous devez plûtot vous placer dans la peau d'un architecte réseau/système. Faites des schemas, posez des questions, travaillez en équipe, experimentez des trucs.
+
+Vous pouvez trouver des schemas d'architecture plus où moins avancés à la fin du support de cours (il est dans le repo pas bien loin).
 
 Q1: Énumerez les bonnes pratiques que vous voulez mettre en place niveau sécurité réseau dans votre infrastructure.
 
