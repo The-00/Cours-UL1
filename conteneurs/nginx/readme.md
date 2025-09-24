@@ -28,6 +28,14 @@ docker compose up --build
 docker-compose up --build
 ```
 
+# Prérequis
+
+votre machine hôte doit avoir le module noyau `ip_tables` chargé.
+
+Vous pouvez vérifier sa présence avec `lsmod | grep ip_tables` et faire `sudo modprobe ip_tables` si tel n'est pas le cas.
+
+Pensez bien a décharger le module à la fin du tp : `sudo modprobe -r iptable_filter ip_tables`.
+
 # Tips 
 
 pour obetenir l'adresse IP du conteneur sans exposer :
